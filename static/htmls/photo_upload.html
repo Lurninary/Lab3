@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка фотографии</title>
+</head>
+<body>
+    <h1>Загрузка фотографии</h1>
+    <form action="/photo/{{ nickname }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="photo" required>
+        <input type="submit" value="Загрузить">
+    </form>
+    {% if photo %}
+    <img src="{{ url_for('static', filename='uploads/' + photo) }}" alt="Фотография">
+    {% endif %}
+</body>
+</html>

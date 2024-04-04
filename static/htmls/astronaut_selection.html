@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма отбора астронавтов</title>
+</head>
+<body>
+    <form action="/astronaut_selection" method="post">
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" id="surname" name="surname" required><br>
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="education">Образование:</label><br>
+        <input type="text" id="education" name="education" required><br>
+        <label for="profession">Выбор основной профессии:</label><br>
+        <select id="profession" name="profession" required>
+            <option value="engineer">Инженер-исследователь</option>
+            <option value="pilot">Пилот</option>
+            <option value="builder">Строитель</option>
+            <option value="exobiologist">Экзобиолог</option>
+            <option value="doctor">Врач</option>
+            <option value="terraforming">Инженер по терраформированию</option>
+            <option value="climatologist">Климатолог</option>
+            <option value="radiation_protection">Специалист по радиационной защите</option>
+            <option value="astrogeologist">Астрогеолог</option>
+            <option value="glaciologist">Гляциолог</option>
+            <option value="life_support">Инженер жизнеобеспечения</option>
+            <option value="meteorologist">Метеоролог</option>
+            <option value="rover_operator">Оператор марсохода</option>
+            <option value="cyberengineer">Киберинженер</option>
+            <option value="navigator">Штурман</option>
+            <option value="drone_pilot">Пилот дронов</option>
+        </select><br>
+        <label for="gender">Пол:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required> Мужской<br>
+        <input type="radio" id="female" name="gender" value="female" required> Женский<br>
+        <label for="motivation">Мотивация:</label><br>
+        <textarea id="motivation" name="motivation" required></textarea><br>
+        <label for="stay_on_mars">Готовы ли остаться на Марсе?</label><br>
+        <input type="radio" id="yes" name="stay_on_mars" value="yes" required> Да<br>
+        <input type="radio" id="no" name="stay_on_mars" value="no" required> Нет<br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
